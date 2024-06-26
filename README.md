@@ -48,7 +48,7 @@ len(other_string)
 Underscores are allowed for better readability: `1_000_000_000` (one billion).
 A number that contains a dot is a floating-point literal: `1.0e9` (one billion).
 
-Binary literals are prefixed with `0b`, octal literals with `0`, and hexadecimal literals with `0x`.
+Binary literals are prefixed with `0b`, and hexadecimal literals with `0x`.
 
 ## Variable declarations
 
@@ -169,7 +169,12 @@ fn main() {
 
   b <<= 2
   b >>= 2
-  b = b | (b << 1) 
-}
+  b = b | (b << 1)
 
-``` 
+  b[0] = !b[0]
+  b[1] |= 7
+
+  byte sb = 0b00101011
+  sb &= 63 
+}
+```
