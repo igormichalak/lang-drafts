@@ -158,3 +158,18 @@ fn main() {
   x = 234
 }
 ```
+
+## Bitwise operations
+
+Bitwise operations can be applied to `byte` and `[n]byte` types.
+
+```
+fn main() {
+  b := [2]byte{0xFF, 0xA8}
+
+  b <<= 2
+  b >>= 2
+  b = b | (b << 1) 
+}
+
+``` 
