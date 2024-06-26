@@ -105,7 +105,7 @@ package main
 import "core:fmt,os,net"
 import "core:time"
 
-func main() {
+fn main() {
 }
 ```
 
@@ -152,7 +152,7 @@ if x := foo(); x < 0 {
 ### `defer` statement
 
 ```
-func main() {
+fn main() {
   x := 123
   defer fmt.println(x)
   x = 234
