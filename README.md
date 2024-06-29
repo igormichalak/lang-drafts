@@ -75,7 +75,7 @@ bool
 # 64-bit signed integer
 int
 
-# 64-bit floating-point
+# 32-bit floating-point
 float
 
 # 32-bit unsigned integer, used to represent Unicode code points
@@ -102,8 +102,8 @@ The following program imports the `fmt`, `os`, `net` and `time` packages from th
 ```
 package main
 
-import "core:fmt,os,net"
-import "core:time"
+import 'core:fmt,os,net'
+import 'core:time'
 
 fn main() {
 }
