@@ -3,12 +3,14 @@
 It's designed for the maximum simplicity, with very little reserved keywords.
 CPU time is valued over memory usage.
 
-It's aimed at user space software.
+It's aimed at user space software using math and concurrency: GUIs, 3D graphics, simulations, machine learning.
 
 Heavily inspired by:
 - Go
 - Odin
+- HolyC
 - C
+- Zig
 
 Draft layout based on https://odin-lang.org/docs/overview/.
 
@@ -53,8 +55,8 @@ Binary literals are prefixed with `0b`, and hexadecimal literals with `0x`.
 ## Variable declarations
 
 ```
-int x
-int y, z
+x: int
+y, z: int
 ```
 
 Variables are initialized to zero by default unless specified otherwise.
@@ -81,7 +83,7 @@ float
 # 32-bit unsigned integer, used to represent Unicode code points
 rune
 
-# 8-bit unsigned integer, used to represent binary data
+# 8-bit unsigned integer, used to represent binary data and ASCII
 byte
 ```
 
@@ -174,7 +176,20 @@ fn main() {
   b[0] = !b[0]
   b[1] |= 7
 
-  byte sb = 0b00101011
+  sb: byte = 0b00101011
   sb &= 63 
+}
+```
+
+## Functions
+
+```
+fn multiply(a, b int) -> int {
+  return a * b
+}
+
+asm fn multiply(a, b int) -> int {
+  mul  a0,a0,a1
+  ret
 }
 ```
