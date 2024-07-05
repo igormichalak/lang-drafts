@@ -57,6 +57,10 @@ Binary literals are prefixed with `0b`, and hexadecimal literals with `0x`.
 ```
 x: int
 y, z: int
+
+# Volatile
+addr: [8]byte = 0x3CF0F00
+reg: int = raw(addr)
 ```
 
 Variables are initialized to zero by default unless specified otherwise.
